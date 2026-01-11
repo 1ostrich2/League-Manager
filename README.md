@@ -1,0 +1,2 @@
+# League-Manager
+League Manager like challenge.place or challonge
