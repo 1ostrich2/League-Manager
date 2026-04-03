@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+
+    <fieldset class="center mt-5 pt-3 login-form-fieldset border rounded w-50">
+        <form method="POST" action="/dashboard" class="create-competition-form">
+            {{ form.hidden_tag() }}
+            <legend class="fs-5 login-form-legend">
+                <small>
+                    <ul>
+                        {{ form.competition_name.label(class="form-text") }}
+                        {{ form.competition_name(class="form-control form-control mt-1 w-75") }}
+                    </ul>
+                    
+                    <ul>
+                        {{ form.private.label(class="text-muted small") }}
+                        {{ form.private() }}
+                    </ul>
+                    
+                    <ul>
+                        {{ form.submit(class="btn btn-outline-info bg-white") }}
+                    </ul>
+                </small>
+            </legend>
+        </form>
+    </fieldset>
+{% endblock %}
